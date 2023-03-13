@@ -1,0 +1,97 @@
+@charset "utf-8";
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+.ordenar{
+    cursor: pointer;
+    transition: 1s;
+}
+.ordenar:hover{
+    color: #0d6efd;
+}
+
+/* CSS MODAL */
+ 
+.modal-container{
+    display: none; /*   Oculto por default   */
+    position: fixed; /*   Se mantiene en un sitio   */
+    z-index: 99999; /*   Aparece por encima de todos los elementos inferriores a 2   */
+    width: 100vw; /*   Ancho full   */
+    height: 100vh; /*   Altura full   */
+    left: 0;
+    top: 0;
+    overflow: auto; /*   Habilita el scroll (si es necesario)   */
+    background-color: rgba(0,0,0,0.4); /*   Color grisaseo semitransparente*/
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.modal-contenido{
+    position: relative;
+    background-color: whitesmoke;
+    margin: auto;
+    padding: 25px;
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    width: 50%;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    animation: .5s aparecerModal;
+}
+
+.cerrar{
+    color: darkgray;
+    float: right;
+    font-size: 2rem;
+    font-weight: bold;
+    border: none;
+    padding: 0;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.cerrar:hover{
+    color: darkred;
+    transition: 0.2s;
+}
+
+input{
+    width: 100%;
+}
+
+input[type=file]{
+    background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+    border: 1px solid #e1e1e1;
+    border-radius: 0;
+    max-width: 100%;
+    width: 100%;
+    border-right: 1px solid #e1e1e1;
+    margin-right: 20px;
+    transition: .5s;
+}
+
+input[type=file]::file-selector-button {
+    background-color: #fff;
+    color: #000;
+    border: 0px;
+    border-right: 1px solid #e1e1e1;
+    padding: 10px 15px;
+    margin-right: 20px;
+    transition: .5s;
+  }
+  
+input[type=file]::file-selector-button:hover {
+    background-color: #eee;
+    border: 0px;
+    border-right: 1px solid #e1e1e1;
+}
+
+@keyframes aparecerModal{
+    from {top:-300px; opacity:0}
+    to {top:0; opacity:1}
+}
+
+/* FIN CSS MODAL */
+
+
+
